@@ -1,30 +1,39 @@
 package ru.netology.stats;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatisticsTest {
 
-    @org.junit.jupiter.api.Test
+    int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    Statistics stat = new Statistics();
+
+    @Test
     void sum() {
+        int actual = stat.sum(sales);
+        int expected = 180;
+        assertEquals(expected,actual);
+
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void middleSum() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void maxSum() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void minSum() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void belowMidSum() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void overMidSum() {
     }
 }

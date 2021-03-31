@@ -1,16 +1,16 @@
 package ru.netology.stats;
 
 public class Statistics {
-    public void sum() {
-           int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-           int allSalesSum = 0;
-           for (int sale : sales){
-               allSalesSum +=sale;
-           }
-        System.out.println(allSalesSum);
+    public int sum(int[] sales) {
+//        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int allSalesSum = 0;
+        for (int sale : sales){
+            allSalesSum +=sale;
+        }
+        return allSalesSum;
     }
 
-    public void middleSum() {
+    public int middleSum() {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int allSalesSum = 0;
         int middleSalesSumPerMonth = 0;
@@ -18,7 +18,7 @@ public class Statistics {
             allSalesSum += sale;
         }
         middleSalesSumPerMonth = allSalesSum/sales.length;
-        System.out.println(middleSalesSumPerMonth);
+        return middleSalesSumPerMonth;
     }
 
     public void maxSum() {
