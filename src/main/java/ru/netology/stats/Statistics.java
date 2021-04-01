@@ -2,7 +2,6 @@ package ru.netology.stats;
 
 public class Statistics {
     public int sum(int[] sales) {
-//        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int allSalesSum = 0;
         for (int sale : sales){
             allSalesSum +=sale;
@@ -10,8 +9,7 @@ public class Statistics {
         return allSalesSum;
     }
 
-    public int middleSum() {
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int middleSum(int[] sales) {
         int allSalesSum = 0;
         int middleSalesSumPerMonth = 0;
         for (int sale : sales) {
@@ -21,8 +19,7 @@ public class Statistics {
         return middleSalesSumPerMonth;
     }
 
-    public void maxSum() {
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int maxSum(int[] sales) {
         int numberOfMonthWithMaxSalesSum = 0;
         int month = 0;
         int maxSale = sales[month];
@@ -34,12 +31,11 @@ public class Statistics {
             }
             month++;
         }
-        System.out.println(numberOfMonthWithMaxSalesSum);
+        return numberOfMonthWithMaxSalesSum;
 
     }
 
-    public void minSum() {
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int minSum(int[] sales) {
         int numberOfMonthWithMinSalesSum = 0;
         int minSale = sales[0];
 
@@ -49,12 +45,11 @@ public class Statistics {
                 numberOfMonthWithMinSalesSum = i;
             }
         }
-        System.out.println(numberOfMonthWithMinSalesSum);
+        return numberOfMonthWithMinSalesSum;
 
     }
 
-    public void belowMidSum() {
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int belowMidSum(int[] sales) {
         int amountOfMonthsBelowMidSum = 0;
         int middleSalesSumPerMonth = 15;
         for (int sale : sales) {
@@ -62,11 +57,10 @@ public class Statistics {
                 amountOfMonthsBelowMidSum += 1;
             }
         }
-        System.out.println(amountOfMonthsBelowMidSum);
+        return amountOfMonthsBelowMidSum;
     }
 
-    public void overMidSum() {
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    public int overMidSum(int[] sales) {
         int amountOfMonthsOverMidSum = 0;
         int middleSalesSumPerMonth = 15;
         for (int sale : sales) {
@@ -74,6 +68,6 @@ public class Statistics {
                 amountOfMonthsOverMidSum += 1;
             }
         }
-        System.out.println(amountOfMonthsOverMidSum);
+        return amountOfMonthsOverMidSum;
     }
 }

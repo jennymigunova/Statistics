@@ -14,26 +14,41 @@ class StatisticsTest {
         int actual = stat.sum(sales);
         int expected = 180;
         assertEquals(expected,actual);
-
     }
 
     @Test
     void middleSum() {
+        int actual = stat.middleSum(sales);
+        int expected = 15;
+        assertEquals(expected, actual);
     }
+
 
     @Test
     void maxSum() {
+        int actual = stat.maxSum(sales);
+        int expected = 7;
+        assertEquals(expected, actual);
     }
 
     @Test
     void minSum() {
+        int actual = stat.minSum(sales);
+        int expected = 8;
+        assertEquals(expected, actual);
     }
 
     @Test
     void belowMidSum() {
+        int actual = stat.belowMidSum(sales);
+        int expected = 5;
+        assertEquals(expected, actual);
     }
 
     @Test
     void overMidSum() {
+        int actual = stat.overMidSum(sales);
+        int expected = 5;
+        assertEquals(expected, actual);
     }
 }
