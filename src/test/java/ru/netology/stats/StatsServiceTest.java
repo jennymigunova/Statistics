@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StatisticsTest {
+class StatsServiceTest {
 
     int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-    Statistics stat = new Statistics();
+    StatsService stat = new StatsService();
 
     @Test
     void sum() {

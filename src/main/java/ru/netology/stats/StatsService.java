@@ -1,6 +1,6 @@
 package ru.netology.stats;
 
-public class Statistics {
+public class StatsService {
     public int sum(int[] sales) {
         int allSalesSum = 0;
         for (int sale : sales){
