@@ -3,8 +3,8 @@ package ru.netology.stats;
 public class StatsService {
     public int sum(int[] sales) {
         int allSalesSum = 0;
-        for (int sale : sales){
-            allSalesSum +=sale;
+        for (int sale : sales) {
+            allSalesSum += sale;
         }
         return allSalesSum;
     }
@@ -15,7 +15,7 @@ public class StatsService {
         for (int sale : sales) {
             allSalesSum += sale;
         }
-        middleSalesSumPerMonth = allSalesSum/sales.length;
+        middleSalesSumPerMonth = allSalesSum / sales.length;
         return middleSalesSumPerMonth;
     }
 
@@ -27,7 +27,7 @@ public class StatsService {
         for (int sale : sales) {
             if (maxSale <= sale) {
                 maxSale = sale;
-                 numberOfMonthWithMaxSalesSum = month;
+                numberOfMonthWithMaxSalesSum = month;
             }
             month++;
         }

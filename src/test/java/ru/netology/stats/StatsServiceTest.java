@@ -13,7 +13,7 @@ class StatsServiceTest {
     void sum() {
         int actual = stat.sum(sales);
         int expected = 180;
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
