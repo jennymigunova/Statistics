@@ -3,6 +3,7 @@
 /.idea/workspace.xml
 Thumbs.db*
 .DS_Store*
+/.DS_Store
 HELP.md
 .gradle
 build/
