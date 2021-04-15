@@ -10,16 +10,12 @@ public class StatsService {
     }
 
     public int middleSum(int[] sales) {
-        int allSalesSum = 0;
-        int middleSalesSumPerMonth = 0;
-        for (int sale : sales) {
-            allSalesSum += sale;
-        }
-        middleSalesSumPerMonth = allSalesSum / sales.length;
-        return middleSalesSumPerMonth;
+        if (sales.length == 0) return 0;
+        return sum(sales) / sales.length;
     }
 
     public int maxSum(int[] sales) {
+        if (sales.length == 0) return 0;
         int numberOfMonthWithMaxSalesSum = 0;
         int month = 0;
         int maxSale = sales[month];
@@ -32,10 +28,10 @@ public class StatsService {
             month++;
         }
         return numberOfMonthWithMaxSalesSum;
-
     }
 
     public int minSum(int[] sales) {
+        if (sales.length == 0) return 0;
         int numberOfMonthWithMinSalesSum = 0;
         int minSale = sales[0];
 
@@ -51,10 +47,9 @@ public class StatsService {
 
     public int belowMidSum(int[] sales) {
         int amountOfMonthsBelowMidSum = 0;
-        int middleSalesSumPerMonth = 15;
         for (int sale : sales) {
-            if (sale < middleSalesSumPerMonth) {
-                amountOfMonthsBelowMidSum += 1;
+            if (sale < middleSum(sales)) {
+                amountOfMonthsBelowMidSum++;
             }
         }
         return amountOfMonthsBelowMidSum;
@@ -62,10 +57,9 @@ public class StatsService {
 
     public int overMidSum(int[] sales) {
         int amountOfMonthsOverMidSum = 0;
-        int middleSalesSumPerMonth = 15;
         for (int sale : sales) {
-            if (sale < middleSalesSumPerMonth) {
-                amountOfMonthsOverMidSum += 1;
+            if (sale < middleSum(sales)) {
+                amountOfMonthsOverMidSum++;
             }
         }
         return amountOfMonthsOverMidSum;
